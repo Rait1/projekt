@@ -1,0 +1,17 @@
+<script>
+//Hard coded variant 
+//Aeg on sätitud videode järgi nii, et viimases videos on näha veel Draamateatri logo.
+//Reklaamile sobib see aeg ka, sest jõuab teha peale ringi ja veel natuke pealegi.
+//!!Töötab ainult esimese ringi jagu!! Teisel ringil juhtub playlistiga midagi.
+setInterval(
+        function(){
+                reklaam = 'https://www.piletimaailm.com/reklaam/index.php';
+                video = 'http://www.youtube.com/embed/WlLAEEMcBUw?wmode=opaque&rel=0&autoplay=1&vq=small&autohide=1&list=PLmh2fnP2bNkZtuHDttPAosrMp2Mui69Bw"';
+                old_src = document.getElementById('frame').src;
+                new_src = old_src == reklaam ? video : reklaam;
+                document.getElementById('frame').src = new_src;
+        },172500
+);
+</script>
+
+<iframe id="frame" src="http://www.youtube.com/embed/WlLAEEMcBUw?wmode=opaque&rel=0&autoplay=1&vq=small&autohide=1&list=PLmh2fnP2bNkZtuHDttPAosrMp2Mui69Bw"" frameborder="0" allowfullscreen style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">Your browser doesn't support IFrames</iframe>
